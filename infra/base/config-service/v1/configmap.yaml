@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-service-config
+data:
+  GitOptions.yaml: |-
+    giturl: 'https://github.com/simonjaeger/contoso.git'
+    localrepositorypath: './contoso'
+    gitmail: 'peter_bryntesson@hotmail.com'
+    gituser: 'peterbryntesson'
+    gitpassword: 'afWdYZXJ0/HIy7WF44QBvcAoSTJ0mfayTpxhNlMuWznt/RsL5D0H8buZveRaqXVWXl1uwtc/PuEE29QpAnRgOY1ogDvL3F5cPfkO4bQ2GP//UK6TXKH/byVHQB2X2ROB'
+    gitbranch: 'main'

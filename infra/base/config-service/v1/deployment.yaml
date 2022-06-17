@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-service
+spec:
+  selector:
+    matchLabels:
+      app: config-service
+  template:
+    metadata:
+      labels:
+        app: config-service
+    spec:
+      containers:
+      - name: config-service
+        image: scr.io/moonshotconfigservice:latest
+        resources:
+          requests:
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        env:
+          - name: ASPNETCORE_URLS
+            value: http://+:80
+        volumeMounts:
+        - mountPath: /app/Configuration
+          name: config
+      volumes:
+      - name: config
+        configMap:
+          name: config-service-config
+          items:
+          - key: "GitOptions.yaml"
+            path: GitOptions.yaml
