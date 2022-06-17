@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: process-configuration
-data:
-  config.tags: |
-    mqtturl: mosquitto.mosquitto.svc.cluster.local
-    inputtopic: input
-    outputtopic: process

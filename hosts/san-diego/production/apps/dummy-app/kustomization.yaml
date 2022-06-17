@@ -1,5 +1,0 @@
-resources:
-- ./../../../../../apps/dummy-app/v1
-- namespace.yaml
-
-namespace: dummy-app
