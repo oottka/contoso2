@@ -3,3 +3,9 @@ resources:
 - namespace.yaml
 
 namespace: dummy-app
+
+configMapGenerator:
+- name: configuration-ipaddresses
+  behavior: replace
+  files:
+  - ipaddresses.config.json=configuration-ipaddresses.json
