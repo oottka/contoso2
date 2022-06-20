@@ -8,7 +8,6 @@ data:
     ipaddresses.config.json: |
       {
         "ipaddresses": [
-          "8.8.8.8",
-          "255.255.128.128"
+          "127.0.0.l"
         ]
       }
