@@ -8,9 +8,21 @@ resources:
 
 namespace: moonshot-sample
 
-
 configMapGenerator:
 - name: input-configuration
   behavior: merge
   files:
   - tags=tags-configuration.yaml
+
+patches:
+- path: ./../../../../../../.defaults/portland-properties-configmap.yaml
+  target:
+    name: input-configuration
+    kind: ConfigMap
+# - patch: |-
+#     - op: replace
+#       path: /data/plant.name
+#       value: portland-dev
+  target:
+    name: input-configuration
+    kind: ConfigMap
