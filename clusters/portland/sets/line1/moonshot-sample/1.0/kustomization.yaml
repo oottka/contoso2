@@ -15,7 +15,7 @@ configMapGenerator:
   - tags=tags-configuration.yaml
 
 patches:
-- path: ./../../../../../../.defaults/portland-properties-configmap.yaml
+- path: ./../../../../../../.defaults/portland-properties-configmap-1.0.yaml
   target:
     name: input-configuration
     kind: ConfigMap
