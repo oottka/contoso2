@@ -12,7 +12,7 @@ configMapGenerator:
 - name: input-configuration
   behavior: merge
   files:
-  - tags=tags-configuration.yaml
+  - tags-configuration.yaml
 
 patches:
 - path: ./../../../../../../.defaults/portland-properties-configmap-1.0.yaml
